@@ -3,153 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <title>Your Free Guide: Domain Flipping (As Promised)</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      color: #222;
       line-height: 1.7;
+      background: #f9f9f9;
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      background: #111;
+      color: white;
+      padding: 15px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      background: url("https://YOUR-LINK-TO-hero-background.png") center/cover no-repeat;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* CONTAINER */
+    .container {
       max-width: 850px;
       margin: auto;
       padding: 20px;
-      color: #222;
+      background: white;
     }
-    h1, h2, h3 {
-      color: #111;
+
+    h2 {
+      margin-top: 40px;
     }
+
+    /* BUTTONS */
     .button {
       display: inline-block;
-      margin: 15px 10px 20px 0;
-      padding: 12px 20px;
-      background-color: #4CAF50;
+      margin: 20px 0;
+      padding: 14px 22px;
+      background: #4CAF50;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
     }
+
     .button:hover {
-      background-color: #45a049;
+      background: #45a049;
     }
-    .back-button {
-      background-color: #555;
+
+    .back {
+      background: #555;
     }
-    .back-button:hover {
-      background-color: #333;
+
+    .back:hover {
+      background: #333;
     }
-    .section {
-      margin-bottom: 30px;
+
+    /* PROGRESS BAR */
+    .progress-container {
+      position: sticky;
+      top: 60px;
+      background: #eee;
+      height: 8px;
+      width: 100%;
+      z-index: 999;
     }
+
+    .progress-bar {
+      height: 8px;
+      width: 0%;
+      background: #4CAF50;
+    }
+
+    /* BLOCKQUOTE */
     blockquote {
       border-left: 4px solid #ccc;
       padding-left: 12px;
       color: #555;
       margin: 15px 0;
     }
+
   </style>
 </head>
+
 <body>
 
-<!-- Back Button -->
-<a href="index.html" class="button back-button">← Back to Home</a>
+<!-- HEADER -->
+<div class="header">
+  <div>Domain Guide</div>
+  <a href="index.html">← Back to Home</a>
+</div>
 
-<h1>Your Free Domain Flipping Guide (Exactly As Promised)</h1>
+<!-- PROGRESS BAR -->
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
 
-<p><strong>This is the full guide I mentioned—completely free.</strong></p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Your Free Domain Flipping Guide</h1>
+  <p>This is the exact guide promised — 100% free, no catch.</p>
+</div>
 
-<p>
-If you came here from my Medium post, this is exactly what I promised: a real, step-by-step guide showing you how to start flipping domains from scratch.
-</p>
+<!-- CONTENT -->
+<div class="container">
 
-<p>
-No signup. No payment. No catch. Just the actual process.
-</p>
+<a href="index.html" class="button back">← Back to Home</a>
+
+<p><strong>No signup. No payment. Just the real process.</strong></p>
 
 <hr>
 
-<div class="section">
 <h2>Step 1: Finding Profitable Domains</h2>
 
-<p>Your success starts with picking the right domains.</p>
-
-<h3>Where to Look:</h3>
 <ul>
-  <li>Namecheap (cheap and beginner-friendly)</li>
-  <li>GoDaddy Auctions (high activity)</li>
-  <li>ExpiredDomains.net (best for hidden opportunities)</li>
-  <li>Flippa (domains + websites)</li>
+  <li>Namecheap</li>
+  <li>GoDaddy Auctions</li>
+  <li>ExpiredDomains.net</li>
+  <li>Flippa</li>
 </ul>
 
-<h3>What to Look For:</h3>
+<p><strong>Look for:</strong></p>
 <ul>
-  <li>Short (under 15 characters)</li>
-  <li>Easy to spell and remember</li>
-  <li>Keyword-focused (AI, crypto, health, finance, etc.)</li>
-  <li>Sounds like a real brand</li>
+  <li>Short and brandable</li>
+  <li>Keyword-rich</li>
+  <li>Easy to remember</li>
 </ul>
 
 <blockquote>
-Good Example: FastAItools.com  
-Bad Example: xqz-124-site.net
+Good: FastAItools.com  
+Bad: xqz-124-site.net
 </blockquote>
 
-<p><strong>Goal:</strong> Buy domains for $5–$15 that could sell for $100+.</p>
-</div>
+<hr>
+
+<h2>Step 2: Buy Smart</h2>
+
+<ul>
+  <li>Start with 1–3 domains</li>
+  <li>Stay under $15 each</li>
+  <li>Avoid trademarks</li>
+</ul>
+
+<p>Track everything in a spreadsheet.</p>
 
 <hr>
 
-<div class="section">
-<h2>Step 2: Buying Domains the Smart Way</h2>
+<h2>Step 3: Add Value</h2>
 
 <ul>
-  <li>Start with 1–3 domains only</li>
-  <li>Don’t overspend early</li>
-  <li>Avoid trademarked names</li>
+  <li>Create a simple site</li>
+  <li>Add 1–3 posts</li>
+  <li>Show monetization potential</li>
 </ul>
 
-<p>Track everything in a simple spreadsheet:</p>
-
-<ul>
-  <li>Domain Name</li>
-  <li>Purchase Price</li>
-  <li>Idea for use</li>
-  <li>Target resale price</li>
-</ul>
-
-<p>This turns it into a system instead of guessing.</p>
-</div>
-
-<hr>
-
-<div class="section">
-<h2>Step 3: Add Value (Where Most People Mess Up)</h2>
-
-<p>
-Instead of just owning a domain, make it look <strong>useful and real</strong>.
-</p>
-
-<h3>Do This:</h3>
-<ul>
-  <li>Create a simple landing page</li>
-  <li>Add 1–3 pieces of content</li>
-  <li>Show how it could be monetized</li>
-</ul>
-
-<h3>Tools:</h3>
+<p><strong>Use:</strong></p>
 <ul>
   <li>WordPress</li>
-  <li>Wix / Squarespace</li>
+  <li>Wix</li>
   <li>GitHub Pages</li>
 </ul>
 
 <blockquote>
-A blank domain might sell for $20  
-The same domain with a simple site could sell for $150+
+$10 domain → $150+ with simple site
 </blockquote>
-
-</div>
 
 <hr>
 
-<div class="section">
-<h2>Step 4: Where to Sell Your Domains</h2>
+<h2>Step 4: Sell Your Domains</h2>
 
 <ul>
   <li>Sedo</li>
@@ -158,75 +206,51 @@ The same domain with a simple site could sell for $150+
   <li>Afternic</li>
 </ul>
 
-<h3>Listing Tip:</h3>
-<ul>
-  <li>Explain who would use the domain</li>
-  <li>Highlight niche and keywords</li>
-</ul>
-
-<blockquote>
-“Perfect domain for an AI startup or SaaS tool. Short, brandable, and keyword-rich.”
-</blockquote>
-
-</div>
+<p>Explain WHO would use it and WHY.</p>
 
 <hr>
 
-<div class="section">
-<h2>Step 5: Get Traffic & Buyers</h2>
+<h2>Step 5: Get Buyers</h2>
 
 <ul>
-  <li>Post on Reddit (r/Entrepreneur, r/SideHustle)</li>
-  <li>Share on Twitter/X</li>
-  <li>Reach out to small businesses</li>
+  <li>Reddit (Entrepreneur subs)</li>
+  <li>Twitter/X</li>
+  <li>Direct outreach</li>
 </ul>
-
-<p>Even a few targeted views can lead to a sale.</p>
-</div>
 
 <hr>
 
-<div class="section">
 <h2>Optional Tool I Used</h2>
 
-<p>
-If you want something structured, this is the tool I personally used to learn faster.
-</p>
-
-<p>
-Not required—but helpful if you want everything laid out step-by-step.
-</p>
+<p>This helped me speed everything up, but it's optional.</p>
 
 <a class="button" href="https://jvz7.com/c/3519267/418319" target="_blank">
   View the Tool
 </a>
 
-</div>
-
 <hr>
 
-<div class="section">
 <h2>Final Thoughts</h2>
 
-<p>
-Domain flipping works because it’s simple:
-</p>
-
 <ul>
-  <li>Low startup cost</li>
+  <li>Low cost to start</li>
   <li>No advanced skills needed</li>
   <li>Scales over time</li>
 </ul>
 
-<p>
-This guide is exactly what I promised—completely free and meant to help you actually get started.
-</p>
-
-<p>
-If you take action on even one step, you’re already ahead of most people.
-</p>
+<p>This is the exact free guide I promised. Now it’s on you to use it.</p>
 
 </div>
+
+<!-- SCRIPT FOR PROGRESS BAR -->
+<script>
+window.onscroll = function() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+};
+</script>
 
 </body>
 </html>
