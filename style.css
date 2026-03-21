@@ -35,8 +35,7 @@ nav a:hover {
   padding: 5rem 2rem;
   text-align: center;
   color: #fff;
-.hero {
-  background: url('hero-background.jpg') no-repeat center center;
+  background: url('hero-background.png') no-repeat center center;
   background-size: cover;
   border-radius: 8px;
   overflow: hidden;
