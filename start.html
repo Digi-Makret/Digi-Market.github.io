@@ -4,26 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start Here — Free Checklist</title>
+<link rel="stylesheet" href="style.css">
 <style>
-body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#222;}
-.container { max-width:600px; margin:auto; padding:40px; text-align:center; }
-.button { display:inline-block; margin:20px 0; padding:14px 24px; background:#4CAF50; color:white; text-decoration:none; border-radius:6px; font-weight:bold; }
-.button:hover { background:#45a049; }
-iframe { width:100%; height:800px; border:0; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #222;
+  }
+
+  .hero {
+    background: url("three.jpg") center/cover no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    margin-top: -50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+  .btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 500px;
+    border: none;
+  }
+
+  p {
+    margin-top: 15px;
+  }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Start Here: Get Your Free Checklist</h1>
-  <p>Enter your email below to receive your free checklist. This step is mandatory to access the free guide.</p>
-
-  <!-- Embed Google Form -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdi3RDAA8C1wClG1xMWoUE20D4mBUpLMf0RvMPn7SQaEUmAIg/viewform?usp=sharing&ouid=103506166708441668203"></iframe>
-
-  <p>After submitting, click the button below to access your free domain flipping guide:</p>
-  <a class="button" href="post1.html">Access Free Guide →</a>
+<div class="hero">
+  <h1>Get Your Free Quickstart Checklist</h1>
+  <p>Enter your email below to access the rest of the site and get your PDF checklist to start buying and selling domains.</p>
 </div>
+
+<div class="container">
+  <h2>Email Capture</h2>
+  <p>Submit your email to unlock all content:</p>
+
+  <!-- Google Form Embed -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdi3RDAA8C1wClG1xMWoUE20D4mBUpLMf0RvMPn7SQaEUmAIg/viewform?embedded=true" onload="enableContinue()" ></iframe>
+
+  <p><strong>After submitting, click below to continue:</strong></p>
+  <a id="continueBtn" href="index.html" class="btn" disabled>Continue to Site →</a>
+</div>
+
+<script>
+  // Enable continue button after form is interacted with
+  function enableContinue() {
+    // Simple approach: user has to click inside iframe at least once
+    const continueBtn = document.getElementById('continueBtn');
+    window.addEventListener('message', function(event) {
+      continueBtn.disabled = false;
+    });
+
+    // Fallback: enable button after 5 seconds (optional)
+    setTimeout(() => { continueBtn.disabled = false; }, 5000);
+  }
+</script>
 
 </body>
 </html>
