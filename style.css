@@ -35,7 +35,7 @@ nav a:hover {
   padding: 5rem 2rem;
   text-align: center;
   color: #fff;
-  background-image: url('hero-background.png'); /* root folder path */
+  background-image: url('https://digi-makret.github.io/Digi-Market.github.io/hero-background.png'); /* root folder path */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
