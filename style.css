@@ -97,8 +97,8 @@ nav a:hover {
 .featured-posts {
   padding: 2rem 1rem;
   max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0 auto; /* centers the whole section */
+  text-align: center; /* centers heading text */
 }
 
 .featured-posts h2 {
@@ -108,55 +108,26 @@ nav a:hover {
   font-size: 2rem;
 }
 
+/* Grid container */
 .featured-posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three wide on desktop */
-  grid-template-rows: repeat(2, auto);   /* two tall on desktop */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
+  grid-template-rows: repeat(2, auto);   /* 2 rows desktop */
   gap: 2rem;
-  justify-items: center;
-  align-items: start;
+  justify-content: center; /* centers the grid within the container */
+  align-items: start;      /* align items to top of each cell */
+  width: 100%;
 }
 
+/* Make each product fill its column */
 .featured-posts article {
-  width: 100%;
-  max-width: 300px;
+  width: 100%; 
+  max-width: 300px; /* keeps cards same width */
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.featured-posts article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.featured-posts h3 a {
-  color: #1a73e8;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.featured-posts p {
-  margin: 0.5rem 0 1rem 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.featured-posts .btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background: #ff9900;
-  color: #fff;
-  padding: 0.7rem 0;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.featured-posts .btn:hover {
-  background: #cc7a00;
 }
 
 /* ============================
