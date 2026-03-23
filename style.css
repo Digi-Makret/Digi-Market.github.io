@@ -1,126 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-/* ============================
-   HEADER
-============================ */
-header {
-  position: relative;
-  background-image: url('images/header-bg.png');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  overflow: hidden;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.25);
-  z-index: 0;
-}
-
-header h1, header nav {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-}
-
-nav a {
-  color: #fff;
-  margin: 0 1rem;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   HERO SECTION
-============================ */
-.hero {
-  background-color: #1a73e8;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 2rem 3rem 2rem;
-  border-radius: 8px;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 1.5rem auto;
-}
-
-/* ============================
-   DORM GUIDE SECTION
-============================ */
-.guide-section {
-  max-width: 800px;
-  margin: -3rem auto 3rem auto;
-  padding: 2rem;
-  background-color: rgba(255,255,255,0.95);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.guide-section h2 {
-  color: #1a73e8;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.guide-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #222;
-}
-
-/* ============================
-   FEATURED PRODUCTS GRID
-============================ */
+/* Fix Featured Products layout for your current HTML structure */
 .featured-posts {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.featured-posts h2 {
-  margin-bottom: 2rem;
-  color: #1a73e8;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.featured-posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 2rem;
   justify-items: center;
   align-items: start;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
+/* Center the heading above it */
+.container > h2 {
+  text-align: center;
+  color: #1a73e8;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Keep your article styling the same */
 .featured-posts article {
   width: 100%;
   max-width: 300px;
@@ -136,141 +36,15 @@ nav a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.featured-posts h3 a {
-  color: #1a73e8;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.featured-posts p {
-  margin: 0.5rem 0 1rem 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.featured-posts .btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background: #ff9900;
-  color: #fff;
-  padding: 0.7rem 0;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.featured-posts .btn:hover {
-  background: #cc7a00;
-}
-
-/* ============================
-   FOOTER
-============================ */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #f1f1f1;
-  margin-top: 3rem;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
+/* Responsive behavior preserved */
 @media (max-width: 1024px) {
-  .featured-posts-grid {
+  .featured-posts {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-  .guide-section {
-    margin: -2rem 1rem 2rem 1rem;
-    padding: 1.5rem;
-  }
-  .featured-posts-grid {
+  .featured-posts {
     grid-template-columns: 1fr;
   }
-  .featured-posts article {
-    max-width: 100%;
-  }
 }
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>Your Site Title</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </nav>
-</header> <!-- ✅ THIS WAS MISSING BEFORE -->
-
-<section class="hero">
-  <h2>Welcome to the Dorm Guide</h2>
-  <p>Your intro text goes here.</p>
-</section>
-
-<section class="guide-section">
-  <h2>Dorm Essentials Guide</h2>
-  <p>Your guide content goes here.</p>
-</section>
-
-<section class="featured-posts">
-  <h2>Featured Products</h2>
-
-  <div class="featured-posts-grid"> <!-- ✅ FIXED GRID WRAPPER -->
-
-    <article>
-      <h3><a href="#">Product 1</a></h3>
-      <p>Description for product 1.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 2</a></h3>
-      <p>Description for product 2.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 3</a></h3>
-      <p>Description for product 3.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 4</a></h3>
-      <p>Description for product 4.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 5</a></h3>
-      <p>Description for product 5.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 6</a></h3>
-      <p>Description for product 6.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-  </div>
-</section>
-
-<footer>
-  <p>Footer content here.</p>
-</footer>
-
-</body>
-</html>
