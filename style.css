@@ -110,9 +110,11 @@ nav a:hover {
 
 .featured-posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three wide grid on desktop */
+  grid-template-columns: repeat(3, 1fr); /* three wide on desktop */
+  grid-template-rows: repeat(2, auto);   /* two tall on desktop */
   gap: 2rem;
   justify-items: center;
+  align-items: start;
 }
 
 .featured-posts article {
@@ -158,11 +160,22 @@ nav a:hover {
 }
 
 /* ============================
+   FOOTER
+============================ */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f1f1f1;
+  margin-top: 3rem;
+}
+
+/* ============================
    RESPONSIVE
 ============================ */
 @media (max-width: 1024px) {
   .featured-posts-grid {
     grid-template-columns: repeat(2, 1fr); /* two wide for tablets */
+    grid-template-rows: auto;             /* allow rows to auto-expand */
   }
 }
 
@@ -179,6 +192,7 @@ nav a:hover {
   }
   .featured-posts-grid {
     grid-template-columns: 1fr; /* stack on mobile */
+    grid-template-rows: auto;
   }
   .featured-posts article {
     max-width: 100%;
