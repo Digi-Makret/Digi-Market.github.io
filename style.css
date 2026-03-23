@@ -11,7 +11,7 @@ body {
 /* --- Header with Background Image --- */
 header {
   position: relative;
-  background-image: url('images/header-bg.jpg'); /* Replace with your image path */
+  background-image: url('images/header-bg.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
