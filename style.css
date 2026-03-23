@@ -1,31 +1,48 @@
 /* --- General Styles --- */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 
+/* --- Header with Background Image --- */
 header {
-  background: #1a73e8;
+  position: relative;
+  background-image: url('images/header-bg.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #ccc;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+/* Overlay to make text readable */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* semi-transparent black overlay */
+  z-index: 0;
+}
+
+header h1,
+header nav {
+  position: relative;
+  z-index: 1;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   margin: 0 1rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 nav a:hover {
@@ -35,15 +52,15 @@ nav a:hover {
 /* --- Hero Section --- */
 .hero {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   color: #fff;
-  background-image: url('images/hero-background.jpg'); /* replace with your hero image */
+  background-image: url('images/hero-background.png'); /* root folder path */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  border-bottom: 4px solid #ccc;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -52,51 +69,112 @@ nav a:hover {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35); /* subtle overlay */
+  background-color: rgba(0, 0, 0, 0.5); /* overlay to make text readable */
   z-index: 0;
+  border-radius: 8px;
 }
 
 .hero h2,
-.hero p {
+.hero p,
+.hero .btn {
   position: relative;
   z-index: 1;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* --- Container --- */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
+.hero .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #ff9900;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #cc7a00;
+}
+
+/* --- Dorm Guide Section --- */
+.guide-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 2rem;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.guide-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #1a73e8;
+}
+
+.guide-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .guide-section h2 {
+    font-size: 1.8rem;
+  }
+  .guide-section p {
+    font-size: 1rem;
+  }
+}
+
+/* --- Features Section --- */
+.features-section {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  flex: 0 0 250px;
+  background: #e8f0fe;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 /* --- Featured Posts --- */
 .featured-posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .featured-posts article {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.featured-posts article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .featured-posts h3 a {
@@ -104,64 +182,93 @@ nav a:hover {
   text-decoration: none;
 }
 
-.featured-posts h3 a:hover {
-  text-decoration: underline;
-}
-
-.featured-posts p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #555;
-}
-
-/* --- Buttons --- */
-.btn {
+.featured-posts .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.4rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
   background: #1a73e8;
   color: #fff;
-  border-radius: 6px;
-  border: none;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-align: center;
 }
 
-.btn:hover {
+.featured-posts .btn:hover {
   background: #155ab6;
-  transform: translateY(-2px);
 }
 
-/* Separate styling for back buttons */
-.btn.back {
-  background: #555;
+/* --- Testimonials --- */
+.testimonials {
+  background: #1a73e8;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
 }
 
-.btn.back:hover {
-  background: #333;
+.testimonials .testimonial {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-style: italic;
+}
+
+.testimonials span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* --- Bottom CTA --- */
+.bottom-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ff9900;
+  color: #fff;
+}
+
+.bottom-cta .btn {
+  background: #fff;
+  color: #ff9900;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.bottom-cta .btn:hover {
+  background: #e6e6e6;
 }
 
 /* --- Footer --- */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  background: #e0e0e0;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  padding: 1rem;
+  background: #ddd;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .featured-posts {
-    grid-template-columns: 1fr;
-  }
+/* --- Email Capture Section --- */
+.email-capture {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f7f7f7;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.email-capture h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.email-capture p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-capture iframe {
+  border: none;
+  width: 100%;
+  max-width: 640px;
+  height: 800px;
+  border-radius: 8px;
 }
