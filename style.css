@@ -19,7 +19,7 @@ a {
 ============================ */
 header {
   position: relative;
-  background-image: url('images/header-bg.jpg'); /* Replace with your header image */
+  background-image: url('images/header-bg.png'); /* Replace with your header image */
   background-size: cover;
   background-position: center;
   color: #fff;
