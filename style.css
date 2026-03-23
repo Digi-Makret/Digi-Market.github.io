@@ -48,17 +48,36 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
+  position: relative;
   text-align: center;
   padding: 4rem 1rem;
-  background: url("images/header-bg.png") center/cover no repeat;
-  position: relative;
-  overflow: hidden;
+  background-image: url("images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* optional overlay */
+  z-index: 0;
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
-  font-size: 2.2rem;
-  color: #1a73e8;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
@@ -66,7 +85,6 @@ nav a:hover {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.1rem;
-  color: #555;
 }
 
 /* Main Container */
