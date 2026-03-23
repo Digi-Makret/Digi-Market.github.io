@@ -50,7 +50,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 5rem 1rem;
-  background: url("images/headerbg.png") center/cover no-repeat;
+  background: url("images/header-bg.png") center/cover no-repeat;
   color: #fff;
   position: relative;
 
