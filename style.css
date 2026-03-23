@@ -1,33 +1,15 @@
 /* ============================
-   GENERAL STYLES
-============================ */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ============================
    HEADER
 ============================ */
 header {
   position: relative;
-  background-image: url('images/header-bg.png'); /* Replace with your header image */
+  background-image: url('images/header-bg.jpg'); /* Your header image */
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
   overflow: hidden;
-  border-bottom: 2px solid #ccc;
-  z-index: 1;
 }
 
 header::before {
@@ -36,7 +18,7 @@ header::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.25); /* lighter overlay so image shows */
   z-index: 0;
 }
 
@@ -47,9 +29,9 @@ header h1, header nav {
 }
 
 header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 nav a {
@@ -67,15 +49,13 @@ nav a:hover {
 ============================ */
 .hero {
   position: relative;
-  padding: 5rem 2rem;
+  padding: 4rem 2rem 3rem 2rem;
   text-align: center;
   color: #fff;
-  background-image: url('images/hero-background.png'); /* Replace with your hero image */
+  background-image: url('images/hero-background.png'); /* hero image */
   background-size: cover;
   background-position: center center;
   border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 3rem;
 }
 
 .hero::before {
@@ -84,95 +64,48 @@ nav a:hover {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.25);
   z-index: 0;
 }
 
-.hero h2,
-.hero p,
-.hero .btn {
+.hero h2, .hero p, .hero .btn {
   position: relative;
   z-index: 1;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-.hero h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* ============================
-   BUTTONS
-============================ */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #ff9900;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background: #cc7a00;
-  transform: translateY(-2px);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
 /* ============================
    DORM GUIDE SECTION
 ============================ */
 .guide-section {
-  max-width: 900px;
-  margin: 3rem auto;
+  max-width: 800px;
+  margin: -3rem auto 3rem auto; /* bring closer to hero */
   padding: 2rem;
-  background: url('images/guide-bg.jpg') center/cover no-repeat; /* Background image behind paragraph */
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  text-align: center;
+  background-color: rgba(255,255,255,0.95); /* semi-transparent white for readability */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;
   position: relative;
-  color: #fff;
-  overflow: hidden;
-}
-
-.guide-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.35); /* overlay for readability */
-  border-radius: 10px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .guide-section h2 {
-  position: relative;
-  z-index: 1; /* text above overlay */
-  font-size: 2.4rem;
+  color: #1a73e8;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: #1a73e8; /* blue header */
 }
 
 .guide-section p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
 }
 
 /* ============================
-   FEATURED PRODUCTS
+   FEATURED PRODUCTS GRID
 ============================ */
 .featured-posts {
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -185,16 +118,20 @@ nav a:hover {
   font-size: 2rem;
 }
 
+.featured-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
 .featured-posts article {
-  display: inline-block;
-  vertical-align: top;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   background: #fff;
   padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -205,103 +142,29 @@ nav a:hover {
 
 .featured-posts h3 a {
   color: #1a73e8;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .featured-posts p {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .featured-posts .btn {
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 1rem;
-}
-
-/* ============================
-   TESTIMONIALS
-============================ */
-.testimonials {
-  background: #1a73e8;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-.testimonials .testimonial {
-  max-width: 600px;
-  margin: 1rem auto;
-  font-style: italic;
-}
-
-.testimonials span {
-  display: block;
-  margin-top: 0.5rem;
-  font-weight: bold;
-}
-
-/* ============================
-   BOTTOM CTA
-============================ */
-.bottom-cta {
-  text-align: center;
-  padding: 3rem 2rem;
   background: #ff9900;
   color: #fff;
-}
-
-.bottom-cta .btn {
-  background: #fff;
-  color: #ff9900;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
+  padding: 0.7rem 0;
   border-radius: 5px;
+  font-weight: bold;
 }
 
-.bottom-cta .btn:hover {
-  background: #e6e6e6;
-}
-
-/* ============================
-   FOOTER
-============================ */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #ddd;
-}
-
-/* ============================
-   EMAIL CAPTURE
-============================ */
-.email-capture {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: #f7f7f7;
-  border-radius: 8px;
-  margin: 2rem auto;
-  max-width: 700px;
-}
-
-.email-capture h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.email-capture p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.email-capture iframe {
-  border: none;
-  width: 100%;
-  max-width: 640px;
-  height: 800px;
-  border-radius: 8px;
+.featured-posts .btn:hover {
+  background: #cc7a00;
 }
 
 /* ============================
@@ -311,25 +174,14 @@ footer {
   header h1 {
     font-size: 2rem;
   }
-
   .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .guide-section h2 {
     font-size: 1.8rem;
   }
-
-  .guide-section p {
-    font-size: 1rem;
+  .guide-section {
+    margin: -2rem 1rem 2rem 1rem;
+    padding: 1.5rem;
   }
-
   .featured-posts article {
-    width: 90%;
-    margin: 1rem auto;
+    max-width: 100%;
   }
 }
