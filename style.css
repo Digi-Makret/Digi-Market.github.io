@@ -1,90 +1,6 @@
-<!-- ============================
-     HEADER
-============================ -->
-<header>
-  <h1>Your Site Title</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-
-<!-- ============================
-     HERO SECTION
-============================ -->
-<section class="hero">
-  <h2>Welcome to the Dorm Guide</h2>
-  <p>Your intro text goes here.</p>
-</section>
-
-<!-- ============================
-     DORM GUIDE SECTION
-============================ -->
-<section class="guide-section">
-  <h2>Dorm Essentials Guide</h2>
-  <p>Your guide content goes here.</p>
-</section>
-
-<!-- ============================
-     FEATURED PRODUCTS SECTION
-============================ -->
-<section class="featured-posts">
-  <h2>Featured Products</h2>
-
-  <!-- ⭐ FIX ADDED: Proper grid wrapper -->
-  <div class="featured-posts-grid">
-
-    <article>
-      <h3><a href="#">Product 1</a></h3>
-      <p>Description for product 1.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 2</a></h3>
-      <p>Description for product 2.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 3</a></h3>
-      <p>Description for product 3.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 4</a></h3>
-      <p>Description for product 4.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 5</a></h3>
-      <p>Description for product 5.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-    <article>
-      <h3><a href="#">Product 6</a></h3>
-      <p>Description for product 6.</p>
-      <a class="btn" href="#">View Product</a>
-    </article>
-
-  </div>
-  <!-- END FIX -->
-</section>
-
-<!-- ============================
-     FOOTER
-============================ -->
-<footer>
-  <p>Footer content here.</p>
-</footer>
-
-<!-- ============================
-     CSS
-============================ -->
+<!DOCTYPE html>
+<html>
+<head>
 <style>
 /* ============================
    HEADER
@@ -285,3 +201,76 @@ footer {
   }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Your Site Title</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </nav>
+</header> <!-- ✅ THIS WAS MISSING BEFORE -->
+
+<section class="hero">
+  <h2>Welcome to the Dorm Guide</h2>
+  <p>Your intro text goes here.</p>
+</section>
+
+<section class="guide-section">
+  <h2>Dorm Essentials Guide</h2>
+  <p>Your guide content goes here.</p>
+</section>
+
+<section class="featured-posts">
+  <h2>Featured Products</h2>
+
+  <div class="featured-posts-grid"> <!-- ✅ FIXED GRID WRAPPER -->
+
+    <article>
+      <h3><a href="#">Product 1</a></h3>
+      <p>Description for product 1.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+    <article>
+      <h3><a href="#">Product 2</a></h3>
+      <p>Description for product 2.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+    <article>
+      <h3><a href="#">Product 3</a></h3>
+      <p>Description for product 3.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+    <article>
+      <h3><a href="#">Product 4</a></h3>
+      <p>Description for product 4.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+    <article>
+      <h3><a href="#">Product 5</a></h3>
+      <p>Description for product 5.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+    <article>
+      <h3><a href="#">Product 6</a></h3>
+      <p>Description for product 6.</p>
+      <a class="btn" href="#">View Product</a>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <p>Footer content here.</p>
+</footer>
+
+</body>
+</html>
