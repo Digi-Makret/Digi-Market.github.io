@@ -2,7 +2,7 @@
    GENERAL STYLES
 ============================ */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -36,7 +36,7 @@ header::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4); /* overlay for readability */
+  background-color: rgba(0,0,0,0.4);
   z-index: 0;
 }
 
@@ -84,7 +84,7 @@ nav a:hover {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4); /* overlay */
+  background-color: rgba(0,0,0,0.4);
   z-index: 0;
 }
 
@@ -117,11 +117,12 @@ nav a:hover {
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
   background: #cc7a00;
+  transform: translateY(-2px);
 }
 
 /* ============================
@@ -131,23 +132,40 @@ nav a:hover {
   max-width: 900px;
   margin: 3rem auto;
   padding: 2rem;
-  background: #f7f7f7;
+  background: url('images/guide-bg.jpg') center/cover no-repeat; /* Background image behind paragraph */
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   text-align: center;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.guide-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.35); /* overlay for readability */
+  border-radius: 10px;
+  z-index: 0;
 }
 
 .guide-section h2 {
+  position: relative;
+  z-index: 1; /* text above overlay */
   font-size: 2.4rem;
   margin-bottom: 1rem;
-  color: #1a73e8;
+  color: #1a73e8; /* blue header */
 }
 
 .guide-section p {
+  position: relative;
+  z-index: 1;
   font-size: 1.15rem;
   line-height: 1.8;
   margin-bottom: 1rem;
-  color: #333;
 }
 
 /* ============================
@@ -175,8 +193,14 @@ nav a:hover {
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-posts article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .featured-posts h3 a {
