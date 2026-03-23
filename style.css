@@ -49,11 +49,10 @@ nav a:hover {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 5rem 1rem;
-  background: url("images/header-bg.png") center/cover no-repeat;
-  color: #fff;
+  padding: 4rem 1rem;
+  background: url("images/heaer-bg.png") center/cover nor repeat;
   position: relative;
-
+}
 
 .hero h2 {
   font-size: 2.2rem;
@@ -66,10 +65,6 @@ nav a:hover {
   margin: 0 auto;
   font-size: 1.1rem;
   color: #555;
-}
-.hero {
-  position: relative;
-  overflow: hidden;
 }
 
 /* Main Container */
